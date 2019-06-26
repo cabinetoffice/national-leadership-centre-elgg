@@ -1,0 +1,11 @@
+.*
+!/.env.example
+!/public/.htaccess
+!/public/.travis.yml
+!.gitignore
+/public/elgg-config/settings.php
+/public/cache
+/public/settings.php
+/public/mod
+/files
+/public/vendor
