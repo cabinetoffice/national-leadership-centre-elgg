@@ -67,7 +67,7 @@ It is presumed that you will use Docker to run this project. This project uses C
 
 #### Using Docker
 
-The `Makefile` and `docker.mk` included in this project provide some easy CLI tools to work with this Docker stack for Drupal.
+The `Makefile` and `docker.mk` included in this project provide some easy CLI tools to work with this Docker stack for Elgg.
 
 **To start your Docker stack:**
 
@@ -95,7 +95,6 @@ Commands:
     prune           Stop and remove containers, networks, images, and volumes (docker-compose down)
     ps              List container for the current project (docker ps with filter by name)
     shell           Enter PHP container as default user (docker exec -ti $CID sh)
-    drush [command] Execute drush command (runs with -r /var/www/html/web, you can override it via DRUPAL_ROOT=PATH)
     logs [service]  Show containers logs, use [service] to show logs of specific service
 ```
 
@@ -103,6 +102,6 @@ Commands:
 
 If you want to import your database, in the volume directory `./mariadb-init` in the root of this repository, put your `.sql` `.sql.gz` `.sh` file(s). All SQL files will be automatically imported once MariaDB container has started. Databases will be created with the names of the `.sql` `.sql.gz` `.sh` file(s).
 
-The default setting in `.env` is connection to a database named `drupal` so the initial import file should be named e.g. `drupal.sql` (see line 22ff).
+The default setting in `.env` is connection to a database named `elgg` so the initial import file should be named e.g. `elgg.sql` (see line 22ff).
 
-For other import/export options, see: https://wodby.com/stacks/drupal/docs/local/import-export/ 
+For other import/export options, see: https://wodby.com/docs/stacks/php/local/#database-import-and-export 
